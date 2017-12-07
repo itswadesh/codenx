@@ -32,7 +32,7 @@
   <link href="css/new-age.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
 
 </head>
 
@@ -62,9 +62,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="features.html">Features</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="documentation.html">Documentation</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="pricing.html">Pricing</a>
           </li>
@@ -92,7 +92,7 @@
       </div>
     </div>
   </nav>
-
+  <!-- <div class="alert alert-success"></div> -->
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
@@ -502,8 +502,7 @@
       <h2>We
         <i class="fa fa-heart"></i>
         new friends!</h2>
-      <form class="text-left card p-4 mr-15">
-
+      <form class="text-left card p-4 mr-15" method="post" action="contact.php">
         <div class="form-group row">
           <div class="col-md-6 mr-15">
             <label for="name" class="text-warning2">Your Name</label>
@@ -516,11 +515,6 @@
           </div>
 
           <div class="col-md-12 mr-15">
-            <label for="address" class="text-warning2">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="Password">
-          </div>
-
-          <div class="col-md-12 mr-15">
             <label for="message" class="text-warning2">Your message/ enquiry</label>
             <textarea class="form-control" id="message" rows="3"></textarea>
           </div>
@@ -530,7 +524,7 @@
 
         <div class="form-group row">
           <div class="col-md-4 col-12 mr-15">
-            <button type="submit" class="btn btn-warning"> Submit Now </button>
+            <button type="submit" class="btn btn-warning"> Send message </button>
           </div>
         </div>
 
@@ -558,18 +552,14 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2017 codenx.com | All Rights Reserved.</p>
-      <ul class="list-inline">
+      <p>&copy; 2017 codenx.com | All Rights Reserved |
+        <a href="terms.html">Terms</a>
+      </p>
+      <!-- <ul class="list-inline">
         <li class="list-inline-item">
           <a href="terms.html">Terms</a>
         </li>
-        <li class="list-inline-item">
-          <a href="terms.html">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="terms.html">License</a>
-        </li>
-      </ul>
+      </ul> -->
     </div>
   </footer>
 
@@ -588,12 +578,14 @@
   <script src="js/jquery.filterizr.min.js"></script>
 
 
-
-
+  <script src="https://unpkg.com/sweetalert2@7.0.7/dist/sweetalert2.all.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 
   <!-- Kick off Filterizr -->
   <script type="text/javascript">
     $(function () {
+      swal('Notice', 'Lately it has been noticed that the webiste uaisc.com is using admin@codenx.com as order confirm email. Where are this has got no link to <b>codenx.com</b>. UAISC is requested to remove the email address from their website.Visiting users are requested not to make any purchase from this website.', 'success')
       //Initialize filterizr with default options
       $('.filtr-container').filterizr();
     });
@@ -657,9 +649,9 @@
 
   </script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <div class="addthis_inline_share_toolbox"></div>
+  <!-- <div class="addthis_inline_share_toolbox"></div> -->
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-504881ff31f62ad3"></script>
+  <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-504881ff31f62ad3"></script> -->
 </body>
 
 </html>
